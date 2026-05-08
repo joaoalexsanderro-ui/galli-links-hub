@@ -4,4 +4,7 @@ export default defineConfig({
   tanstackStart: {
     target: "vercel",
   },
+  build: {
+    outDir: ".vercel/output",
+  },
 });
