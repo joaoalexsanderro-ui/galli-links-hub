@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Globe, MessageCircle, Calendar, Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/galli-logo.png";
+import logo from "/galli-logo-new.png";
 import bg from "@/assets/galli-bg.jpg";
 
 export const Route = createFileRoute("/")({
@@ -46,19 +46,17 @@ function Index() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-md flex-col items-center justify-center gap-6 px-5 py-10">
-        <div className="animate-[fadeUp_0.6s_ease-out_both]">
+        <div className="animate-[fadeUp_0.6s_ease-out_both] w-full px-8 flex justify-center">
           <img
             src={logo}
             alt="Galli Topografia"
-            width={140}
-            height={140}
-            className="h-36 w-36 object-contain drop-shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+            className="h-auto w-full max-w-[280px] object-contain drop-shadow-[0_4px_12px_rgba(255,255,255,0.15)]"
           />
         </div>
 
         <header className="text-center animate-[fadeUp_0.6s_ease-out_0.1s_both]">
-          <h1 className="text-2xl font-bold tracking-wide text-foreground">
-            GALLI <span className="text-gold">TOPOGRAFIA</span>
+          <h1 className="sr-only">
+            GALLI TOPOGRAFIA
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Topografia e Georreferenciamento
@@ -81,7 +79,7 @@ function Index() {
                 boxShadow: "var(--shadow-card)",
               }}
             >
-              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold transition-colors group-hover:bg-gold/25">
+              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold transition-colors group-hover:bg-gold/20">
                 <Icon className="h-5 w-5" />
               </span>
               <span className="flex flex-col">
