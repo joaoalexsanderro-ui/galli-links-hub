@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Globe, MessageCircle, Calendar, Instagram, Facebook } from "lucide-react";
 import logo from "/galli-logo-new.png";
-import bg from "/galli-final-bg.png";
+import bg from "/galli-georef-bg.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -35,16 +35,17 @@ function Index() {
   
   return (
     <main className="relative min-h-screen w-full flex flex-col items-center text-foreground overflow-x-hidden bg-[#020617]">
-      {/* 1. Solid Background Color */}
+      {/* 1. Background Image - Land being measured with georeferencing */}
       <div 
-        className="fixed inset-0 z-0 bg-[#2c67a4]"
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bg})` }}
       />
       
-      {/* 2. Sophisticated Overlays & Depth Gradients */}
+      {/* 2. Brand Blue Overlay for cohesion */}
       <div 
         className="fixed inset-0 z-[1]"
         style={{
-          background: `radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%)`
+          background: `linear-gradient(180deg, rgba(44, 103, 164, 0.55) 0%, rgba(10, 25, 50, 0.78) 100%)`
         }}
       />
 
