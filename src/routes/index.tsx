@@ -65,26 +65,27 @@ function Index() {
           </p>
         </header>
 
-        <nav className="mt-2 flex w-full flex-col gap-3">
+        <nav className="mt-4 flex w-full flex-col gap-4">
           {links.map(({ href, label, desc, Icon }, i) => (
             <a
               key={label}
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group flex items-center gap-4 rounded-2xl border border-white/15 bg-white/[0.07] px-4 py-3.5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/40 hover:bg-white/[0.12] animate-[fadeUp_0.5s_ease-out_both]"
+              className="group relative overflow-hidden rounded-full bg-white/10 px-6 py-4 backdrop-blur-md transition-all duration-300 hover:bg-white/20 border border-white/20 animate-[fadeUp_0.5s_ease-out_both]"
               style={{
                 animationDelay: `${0.18 + i * 0.08}s`,
-                boxShadow: "var(--shadow-card)",
               }}
             >
-              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold transition-colors group-hover:bg-gold/20">
-                <Icon className="h-5 w-5" />
-              </span>
-              <span className="flex flex-col">
-                <span className="text-sm font-semibold text-foreground">{label}</span>
-                <span className="text-xs text-muted-foreground">{desc}</span>
-              </span>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <Icon className="h-6 w-6 text-white" />
+                  <div className="flex flex-col">
+                    <span className="text-base font-medium text-white">{label}</span>
+                  </div>
+                </div>
+                <div className="h-2 w-2 rounded-full bg-white/40" />
+              </div>
             </a>
           ))}
         </nav>
