@@ -35,18 +35,16 @@ function Index() {
   
   return (
     <main className="relative min-h-screen w-full flex flex-col items-center text-foreground overflow-x-hidden bg-[#020617]">
-      {/* 1. Cinematic Background Layer - Show more background */}
+      {/* 1. Solid Background Color */}
       <div 
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-[0.35] scale-100"
-        style={{ backgroundImage: `url(${bg})` }}
+        className="fixed inset-0 z-0 bg-[#2c67a4]"
       />
-      <div className="fixed inset-0 z-[1] bg-gradient-to-b from-black/40 via-transparent to-black/70 pointer-events-none" />
       
-      {/* 2. Sophisticated Blue Overlay & Depth Gradients - Using Brand Blue */}
+      {/* 2. Sophisticated Overlays & Depth Gradients */}
       <div 
         className="fixed inset-0 z-[1]"
         style={{
-          background: `radial-gradient(circle at center, ${brandBlue}26 0%, rgba(2, 6, 23, 0.85) 100%)`
+          background: `radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%)`
         }}
       />
 
