@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Globe, MessageCircle, Calendar, Instagram, Facebook } from "lucide-react";
 import logo from "/galli-logo-new.png";
-import bg from "@/assets/galli-bg.jpg";
+import bg from "/galli-new-bg.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -37,11 +37,10 @@ function Index() {
         src={bg}
         alt=""
         aria-hidden="true"
-        className="fixed inset-0 h-full w-full object-cover opacity-60"
+        className="fixed inset-0 h-full w-full object-cover"
       />
       <div
-        className="fixed inset-0"
-        style={{ background: "var(--gradient-overlay)" }}
+        className="fixed inset-0 bg-black/40"
         aria-hidden="true"
       />
 
