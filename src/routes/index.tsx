@@ -33,9 +33,18 @@ const links: LinkItem[] = [
 function Index() {
   return (
     <main 
-      className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat bg-fixed text-foreground"
-      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${bg})` }}
+      className="relative min-h-screen w-full flex flex-col items-center justify-center text-foreground"
     >
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ 
+          backgroundImage: `url(${bg})`,
+        }}
+      />
+      <div 
+        className="fixed inset-0 z-1 bg-black/45"
+      />
+
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-md flex-col items-center justify-center gap-6 px-5 py-10">
         <div className="animate-[fadeUp_0.6s_ease-out_both] w-full px-4 flex justify-center">
