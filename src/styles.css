@@ -63,7 +63,7 @@
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.20 0.05 245); /* Elegant deep corporate blue */
+  --background: oklch(0.10 0.02 240);
   --foreground: oklch(0.96 0.01 90);
   --gold: oklch(0.82 0.12 85); /* Refined gold for accents */
   --gold-foreground: oklch(0.20 0.05 245);
