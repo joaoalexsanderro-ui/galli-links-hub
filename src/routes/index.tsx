@@ -154,7 +154,7 @@ function Index() {
             <div className="w-[1px] h-3 bg-white" />
           </div>
           <p className="text-[7px] uppercase tracking-[0.5em] text-white/20 font-light text-center">
-            © 2026 // GALLI PRECISION GROUP
+            © 2026 Galli Topografia
           </p>
         </footer>
       </div>
