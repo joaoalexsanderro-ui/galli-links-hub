@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router"; // Rebuild trigger
 import { Globe, MessageCircle, Calendar, Instagram, Facebook } from "lucide-react";
 import logo from "/galli-logo-new.png";
 import bg from "/galli-georef-bg.jpg";
