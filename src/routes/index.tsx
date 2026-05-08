@@ -79,7 +79,7 @@ function Index() {
                 boxShadow: "var(--shadow-card)",
               }}
             >
-              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold transition-colors group-hover:bg-gold/25">
+              <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold transition-colors group-hover:bg-gold/20">
                 <Icon className="h-5 w-5" />
               </span>
               <span className="flex flex-col">
