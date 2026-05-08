@@ -46,11 +46,11 @@ function Index() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-md flex-col items-center justify-center gap-6 px-5 py-10">
-        <div className="animate-[fadeUp_0.6s_ease-out_both] w-full px-8 flex justify-center">
+        <div className="animate-[fadeUp_0.6s_ease-out_both] w-full px-4 flex justify-center">
           <img
             src={logo}
             alt="Galli Topografia"
-            className="h-auto w-full max-w-[280px] object-contain drop-shadow-[0_4px_12px_rgba(255,255,255,0.15)]"
+            className="h-auto w-full max-w-[320px] object-contain"
           />
         </div>
 
