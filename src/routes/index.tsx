@@ -32,99 +32,121 @@ const links: LinkItem[] = [
 
 function Index() {
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-center text-foreground overflow-x-hidden bg-[#050a14]">
-      {/* Cinematic Background Layer */}
+    <main className="relative min-h-screen w-full flex flex-col items-center text-foreground overflow-x-hidden bg-[#020617]">
+      {/* 1. Cinematic Background Layer */}
       <div 
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-[0.15] scale-110 blur-[80px]"
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-[0.2] scale-105"
         style={{ backgroundImage: `url(${bg})` }}
       />
       
-      {/* Tech Overlay: Grid & Coordinates */}
-      <div className="fixed inset-0 z-[1] opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} 
+      {/* 2. Sophisticated Blue Overlay & Gradients */}
+      <div 
+        className="fixed inset-0 z-[1]"
+        style={{
+          background: "radial-gradient(circle at center, rgba(30, 58, 138, 0.3) 0%, rgba(2, 6, 23, 0.95) 100%)"
+        }}
+      />
+
+      {/* 3. Tech Elements: Grid & HUD */}
+      <div className="fixed inset-0 z-[2] opacity-[0.05] pointer-events-none" 
+           style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} 
       />
       
-      {/* Topographic Lines Emulation & Radial Gradients */}
-      <div className="fixed inset-0 z-[2] pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/10 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[150px]" />
+      {/* 4. Topographic Lines & Particle Simulation (Swaying Glows) */}
+      <div className="fixed inset-0 z-[3] pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] animate-pulse rounded-full" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-indigo-500/10 blur-[140px] animate-pulse rounded-full" style={{ animationDelay: '2s' }} />
         
-        {/* HUD Elements */}
-        <div className="absolute top-10 left-10 font-mono text-[8px] tracking-[0.2em] text-white/10 uppercase vertical-text">
-          GPS_COORDINATES: -23.5505 / -46.6333
-        </div>
-        <div className="absolute bottom-10 right-10 font-mono text-[8px] tracking-[0.2em] text-white/10 uppercase">
-          SCANNING_TERRAIN_V.4.2
+        {/* Discrete Coordinates */}
+        <div className="absolute top-8 left-8 flex gap-8">
+          <span className="font-mono text-[9px] tracking-widest text-white/20 uppercase">Lat: -23.550520</span>
+          <span className="font-mono text-[9px] tracking-widest text-white/20 uppercase">Long: -46.633308</span>
         </div>
       </div>
 
-      {/* Main Content Container */}
-      <div className="relative z-10 mx-auto flex w-full max-w-sm flex-col items-center justify-center gap-12 px-8 py-16">
+      {/* Main Content */}
+      <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center gap-12 px-6 py-20">
         
-        {/* Hero Section: Logo with Premium Breathing Animation */}
-        <div className="relative group w-full flex justify-center animate-[fadeUp_1.2s_ease-out_both]">
-          <div className="absolute inset-0 bg-blue-600/15 blur-[80px] rounded-full animate-[pulse_6s_ease-in-out_infinite]" />
-          <img
-            src={logo}
-            alt="Galli Topografia"
-            className="relative h-auto w-full max-w-[280px] object-contain drop-shadow-[0_0_30px_rgba(0,102,255,0.2)]"
-          />
+        {/* Hero Section */}
+        <div className="flex flex-col items-center gap-8 w-full animate-[fadeUp_1.5s_ease-out_both]">
+          <div className="relative group">
+            <div className="absolute inset-0 bg-blue-500/20 blur-[60px] rounded-full animate-[pulse_4s_ease-in-out_infinite]" />
+            <img
+              src={logo}
+              alt="Galli Topografia"
+              className="relative h-auto w-full max-w-[300px] object-contain"
+            />
+          </div>
+          
+          <div className="text-center space-y-3">
+            <h1 className="text-xl md:text-2xl font-light tracking-[0.3em] text-white uppercase">
+              Galli <span className="font-medium text-blue-400">Topografia</span>
+            </h1>
+            <div className="h-[1px] w-12 bg-blue-500/40 mx-auto" />
+            <p className="text-[10px] md:text-[11px] font-light tracking-[0.2em] text-white/50 uppercase max-w-[280px]">
+              Geotecnologia e Precisão Geoespacial
+            </p>
+          </div>
         </div>
 
-        {/* Typography Section */}
-        <header className="text-center space-y-3 animate-[fadeUp_1.2s_ease-out_0.2s_both]">
-          <h1 className="sr-only">GALLI TOPOGRAFIA</h1>
-          <p className="text-sm uppercase tracking-[0.4em] font-light text-blue-400/80">
-            Geotecnologia Premium
-          </p>
-          <div className="h-[1px] w-8 bg-blue-500/30 mx-auto" />
-          <p className="text-[11px] md:text-xs font-light tracking-[0.1em] leading-relaxed text-white/40 max-w-[260px] mx-auto uppercase">
-            Engenharia moderna e precisão agroespacial para o seu imóvel.
-          </p>
-        </header>
-
-        {/* Premium Navigation Links */}
-        <nav className="flex w-full flex-col gap-4 animate-[fadeUp_1.2s_ease-out_0.4s_both]">
-          {links.map(({ href, label, Icon }, i) => (
+        {/* Premium Navigation Cards */}
+        <nav className="flex w-full flex-col gap-5 animate-[fadeUp_1.5s_ease-out_0.3s_both]">
+          {links.map(({ href, label, desc, Icon }, i) => (
             <a
               key={label}
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group relative flex items-center justify-between overflow-hidden rounded-xl bg-white/[0.03] px-6 py-4 backdrop-blur-[20px] border border-white/[0.05] transition-all duration-700 hover:bg-white/[0.07] hover:border-blue-500/40 hover:shadow-[0_0_30px_rgba(0,102,255,0.1)]"
-              style={{ animationDelay: `${0.4 + i * 0.1}s` }}
+              className="group relative flex items-center justify-between p-5 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-2xl transition-all duration-500 hover:bg-white/[0.06] hover:border-blue-500/30 hover:shadow-[0_0_40px_rgba(59,130,246,0.1)] hover:-translate-y-1"
+              style={{ animationDelay: `${0.5 + i * 0.1}s` }}
             >
-              {/* Internal Reflection Effect */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              {/* Card Glow Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/[0.02] to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
-              <div className="relative flex items-center gap-4">
-                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/[0.02] border border-white/[0.05] group-hover:border-blue-500/20 group-hover:bg-blue-500/5 transition-all duration-500">
-                  <Icon className="h-4 w-4 text-white/40 group-hover:text-blue-400 transition-colors duration-500" />
+              <div className="relative flex items-center gap-5">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 group-hover:border-blue-400/30 transition-all duration-500">
+                  <Icon className="h-6 w-6 text-white/60 group-hover:text-blue-400 transition-colors duration-500" />
                 </div>
-                <span className="text-[13px] font-light tracking-[0.15em] text-white/70 group-hover:text-white group-hover:tracking-[0.18em] transition-all duration-500 uppercase">
-                  {label}
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-[14px] font-medium tracking-wide text-white/90 group-hover:text-white transition-colors">
+                    {label}
+                  </span>
+                  <span className="text-[10px] font-light tracking-wider text-white/30 group-hover:text-white/50 transition-colors">
+                    {desc}
+                  </span>
+                </div>
               </div>
               
-              <div className="relative h-[1px] w-4 bg-white/10 group-hover:w-6 group-hover:bg-blue-500/50 transition-all duration-500" />
+              <div className="relative flex items-center justify-center w-8 h-8">
+                <div className="absolute inset-0 bg-white/5 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500" />
+                <svg 
+                  className="w-4 h-4 text-white/20 group-hover:text-blue-400 transition-all duration-500 group-hover:translate-x-1" 
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </a>
           ))}
         </nav>
 
-        {/* Minimalist Footer */}
-        <footer className="text-[9px] uppercase tracking-[0.3em] text-white/20 font-light animate-[fadeUp_1.2s_ease-out_0.8s_both]">
-          EST. 2026 // GALLI_GROUP
+        {/* Footer */}
+        <footer className="mt-10 flex flex-col items-center gap-4 animate-[fadeUp_1.5s_ease-out_1s_both]">
+          <div className="flex gap-4 items-center opacity-20">
+            <div className="w-1 h-1 rounded-full bg-white" />
+            <div className="w-1 h-1 rounded-full bg-white" />
+            <div className="w-1 h-1 rounded-full bg-white" />
+          </div>
+          <p className="text-[9px] uppercase tracking-[0.4em] text-white/20 font-light">
+            © 2026 // Galli Precision Group
+          </p>
         </footer>
       </div>
 
       <style>{`
         @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+          from { opacity: 0; transform: translateY(40px); filter: blur(15px); }
           to { opacity: 1; transform: translateY(0); filter: blur(0); }
-        }
-        .vertical-text {
-          writing-mode: vertical-rl;
-          text-orientation: mixed;
         }
       `}</style>
     </main>
