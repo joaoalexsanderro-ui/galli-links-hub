@@ -92,9 +92,10 @@ function Index() {
               className="h-[1px] w-12 mx-auto" 
               style={{ backgroundColor: `${brandBlue}4d` }}
             />
-            <p className="text-[10px] md:text-[11px] font-light tracking-[0.2em] text-white/70 max-w-[280px] mx-auto leading-relaxed">
-              Regularização e Georreferenciamento de Imóveis
-            </p>
+            <div className="text-[10px] md:text-[11px] font-light tracking-[0.1em] text-white/70 max-w-[280px] mx-auto leading-relaxed space-y-1">
+              <p className="uppercase tracking-[0.2em]">Topografia e Georreferenciamento</p>
+              <p>Regularizamos o seu imóvel com agilidade e compromisso 🤝</p>
+            </div>
           </div>
         </div>
 
