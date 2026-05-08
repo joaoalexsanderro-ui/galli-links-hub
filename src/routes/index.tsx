@@ -79,11 +79,9 @@ function Index() {
           </div>
           
           <div className="text-center space-y-3">
-            <h1 className="text-xl md:text-2xl font-light tracking-[0.3em] text-white uppercase">
-              Galli <span className="font-medium text-blue-400">Topografia</span>
-            </h1>
+            <h1 className="sr-only">GALLI TOPOGRAFIA</h1>
             <div className="h-[1px] w-12 bg-blue-500/40 mx-auto" />
-            <p className="text-[10px] md:text-[11px] font-light tracking-[0.2em] text-white/50 uppercase max-w-[280px]">
+            <p className="text-[10px] md:text-[11px] font-light tracking-[0.2em] text-white/50 uppercase max-w-[280px] mx-auto">
               Geotecnologia e Precisão Geoespacial
             </p>
           </div>
