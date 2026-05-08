@@ -80,8 +80,8 @@ function Index() {
           <div className="text-center space-y-3">
             <h1 className="sr-only">GALLI TOPOGRAFIA</h1>
             <div className="h-[1px] w-12 bg-blue-500/30 mx-auto" />
-            <p className="text-[10px] md:text-[11px] font-light tracking-[0.3em] text-white/70 max-w-[280px] mx-auto leading-relaxed">
-              Geotecnologia e Precisão Geoespacial
+            <p className="text-[10px] md:text-[11px] font-light tracking-[0.2em] text-white/70 max-w-[280px] mx-auto leading-relaxed">
+              Regularização e Georreferenciamento de Imóveis
             </p>
           </div>
         </div>
