@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Globe, MessageCircle, Calendar, Instagram, Facebook } from "lucide-react";
 import logo from "/galli-logo-new.png";
-import bg from "/galli-new-bg.png";
+import bg from "/galli-final-bg.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
